@@ -1,38 +1,129 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Tamil&display=swap');
+
+body {
+  background-color: #FECEA8;
+  background-image:  linear-gradient(#ffffff 0.9px, transparent 0.9px), linear-gradient(to right, #ffffff 0.9px, #FECEA8 0.9px);
+  background-size: 18px 18px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#wrapper{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: stretch;
+  height: 100vh;
+}
+
+.section {
+  margin: 5vh 20px 5vh 20px;
+  border: 7px solid #45171D;
+  border-radius: 15px;
+  width: 40%;
+  background-color: white;
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  margin: -1px -1px 0px -1px;
+  font-family: 'Tiro Tamil', serif;
+  font-size: 25px;
+  letter-spacing: 2px;
+  background-color: #45171D;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#editor {
+  border: none;
+  height: 80vh;
+  padding: 15px;
+  font-size: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  resize: none;
+  outline: none;
+}
+
+.toolbar h4{
+  margin: 10px;
+}
+
+.toolbar button{
+  margin: 10px;
+}
+
+#preview {
+  padding: 0px 15px;
+  width: 100%;
+  height: 80vh;
+  overflow: scroll;
+  box-sizing: border-box;
+}
+
+blockquote {
+  background-color: rgb(241, 241, 241);
+  padding: 1px;
+  border-left: 5px solid rgb(132, 132, 132);
+}
+
+blockquote p{
+  padding-left: 10px;
+}
+
+p code {
+  background-color: rgb(241, 241, 241);
+  padding: 3px;
+  border-radius: 5px;
+}
+
+pre {
+  background-color: rgb(241, 241, 241);
+  padding: 15px;
+}
+
+pre code{
+  background-color: none;
+}
+
+#clear {
+  background-color: #F03861;
+  box-shadow: 2px 2px black;
+  font-family: 'Tiro Tamil', serif;
+  font-size: 18px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+#clear:hover {
+  background-color: #FF847C;
+}
+
+@media (max-width: 900px) {
+  #wrapper{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  to {
-    transform: rotate(360deg);
+  .section {
+    width: 80%;
+    height: 40vh;
+  }
+  #editor {
+    height: 30vh;
+  }
+  #preview {
+    height: 30vh;
+  }
+  .section {
+    margin: 2vh 20px 2vh 20px;
   }
 }
